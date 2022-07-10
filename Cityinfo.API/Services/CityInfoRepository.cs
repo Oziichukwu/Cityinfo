@@ -16,6 +16,39 @@ namespace Cityinfo.API.Services
         {
             return await _context.Cities.OrderBy(c => c.Name).ToListAsync();
         }
+        
+        public async Task<(IEnumerable<City>, PaginationMetaData)> GetCitiesAsync(string? name, string? searchQuery,
+            int pageNumber , int pageSize)
+        {
+    
+            var collection = _context.Cities as IQueryable<City>;
+
+            if (!string.IsNullOrWhiteSpace(name))
+            {
+                name = name.Trim();
+                collection = collection.Where(c => c.Name == name);
+            }
+
+            if (!string.IsNullOrWhiteSpace(searchQuery))
+            {
+                searchQuery = searchQuery.Trim();
+                searchQuery.ToLower();
+                collection = collection.Where(a => a.Name.Contains(searchQuery) 
+                || (a.Description != null && a.Description.Contains(searchQuery)));
+            }
+
+            var totalItemCount = await collection.CountAsync();
+
+            var paginationMetadata = new PaginationMetaData(
+                totalItemCount, pageSize, pageNumber);
+
+           var collectionToReturn = await collection.OrderBy(c => c.Name)
+                .Skip(pageSize * (pageNumber - 1))
+                .Take(pageSize)
+                .ToListAsync();
+
+           return (collectionToReturn, paginationMetadata);
+        }
 
         public async Task<City?> GetCityAsync(int cityId, bool includePointsOfInterest)
         {
