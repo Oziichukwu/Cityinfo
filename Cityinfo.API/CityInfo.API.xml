@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Cityinfo.API</name>
+    </assembly>
+    <members>
+        <member name="T:Cityinfo.API.Migrations.CityInfoDbInitialMigration">
+            <inheritdoc />
+        </member>
+        <member name="M:Cityinfo.API.Migrations.CityInfoDbInitialMigration.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Cityinfo.API.Migrations.CityInfoDbInitialMigration.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Cityinfo.API.Migrations.CityInfoDbInitialMigration.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Cityinfo.API.Migrations.CityInfoDbAddPointOfInterestDescription">
+            <inheritdoc />
+        </member>
+        <member name="M:Cityinfo.API.Migrations.CityInfoDbAddPointOfInterestDescription.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Cityinfo.API.Migrations.CityInfoDbAddPointOfInterestDescription.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Cityinfo.API.Migrations.CityInfoDbAddPointOfInterestDescription.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Cityinfo.API.Migrations.DataSeed">
+            <inheritdoc />
+        </member>
+        <member name="M:Cityinfo.API.Migrations.DataSeed.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Cityinfo.API.Migrations.DataSeed.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Cityinfo.API.Migrations.DataSeed.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Cityinfo.API.Migrations.anotherChange">
+            <inheritdoc />
+        </member>
+        <member name="M:Cityinfo.API.Migrations.anotherChange.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Cityinfo.API.Migrations.anotherChange.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Cityinfo.API.Migrations.anotherChange.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Cityinfo.API.Migrations.usingPoints">
+            <inheritdoc />
+        </member>
+        <member name="M:Cityinfo.API.Migrations.usingPoints.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Cityinfo.API.Migrations.usingPoints.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Cityinfo.API.Migrations.usingPoints.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Cityinfo.API.Migrations.citywithoutpointofinterestdto">
+            <inheritdoc />
+        </member>
+        <member name="M:Cityinfo.API.Migrations.citywithoutpointofinterestdto.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Cityinfo.API.Migrations.citywithoutpointofinterestdto.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:Cityinfo.API.Migrations.citywithoutpointofinterestdto.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:Cityinfo.API.Models.CityWithoutPointsOfInterestDto">
+            <summary>
+            A DTO for a city without points of interest
+            </summary>
+        </member>
+        <member name="P:Cityinfo.API.Models.CityWithoutPointsOfInterestDto.Id">
+            <summary>
+            The id of the city
+            </summary>
+        </member>
+        <member name="P:Cityinfo.API.Models.CityWithoutPointsOfInterestDto.Name">
+            <summary>
+            The name of the city
+            </summary>
+        </member>
+        <member name="P:Cityinfo.API.Models.CityWithoutPointsOfInterestDto.Description">
+            <summary>
+            The Description of the city
+            </summary>
+        </member>
+        <member name="M:Cityinfo.API.Controllers.CitiesController.GetCity(System.Int32,System.Boolean)">
+            <summary>
+            Get a city by id
+            </summary>
+            <param name="id">The id of the city to get</param>
+            <param name="includePointsOfInterest">Whether or not to include the points of interest </param>
+            <returns>An IActionResult</returns>
+            <response code="200">Success Returns the requested city</response>
+            <response code="404">Not FoundCity requested does not exist</response>
+            <response code="400">Bad Request inputed request/resource was not supported</response>
+        </member>
+    </members>
+</doc>
